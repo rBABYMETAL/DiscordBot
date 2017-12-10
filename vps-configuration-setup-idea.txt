@@ -1,0 +1,18 @@
+- 'install Debian 9', preinstalled VPS
+- backup:
+   - install rsync for backup ?
+   - set up ssh+rsync cronjob for backup ?
+   or use duplicity
+- setup cron job to dump database before backup
+- setup sshd to only allow only users from a ssh-group
+- install redis
+- install postgresql
+- run something like supervise or runit, etc. to keep the processes running like workers or discordbot
+- install+configure monit for monitoring: need to check if redis and postgresql keep running, usually not a problem of course, but checking is good
+- install+configure postfix email server so it can send email with notifications
+- install+configure webserver:
+  - nginx for HTTP and maybe HTTPS/HTTP/2
+  - OR add h2o webserver for HTTPS/HTTP/2
+- install acmetool for HTTPS-certificates
+- configure PostgreSQL and HTTPS/HTTP/2-webserver to use certificates
+- setup a free pingdom account to check if things are still running/reachable ?
